@@ -11,13 +11,6 @@ import { SalaList } from '../../../data/sala-lista';
   styleUrl: './principal.component.css'
 })
 export class PrincipalComponent {
-  
-  // salas: ISala[] = [
-  //   { descricao: '1', status: Status.Disponivel },
-  //   { descricao: '2', status: Status.Indisponivel },
-  //   {descricao: '3', status: Status.Ocupado},
-  // ];
-
 
   salaLista = SalaList;
 

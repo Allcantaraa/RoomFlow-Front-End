@@ -1,5 +1,5 @@
 export enum Status {
   Disponivel = 'Disponivel',
-  Reservada = 'Ocupado',
+  Reservada = 'Reservada',
   Indisponivel = 'Indisponivel'
 }
