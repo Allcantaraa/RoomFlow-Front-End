@@ -1,10 +1,20 @@
-<div *ngFor="let sala of salaLista">
-  <app-cards-sala [sala]="sala"></app-cards-sala>
-</div>
+<nav class="nav">
+  <img src="icons/logoRoom_processed.png" alt="" />
+  <h1>Painel de Monitoramento</h1>
+  <button class="btn btn-danger">Sair</button>
+</nav>
 
-<div class="salas-criadas">
-  <p>Salas Disponiveis: {{salasDisponiveis}}</p>
-  <p>Reservadas: {{salasReservadas}}</p>
-  <p>Indisponiveis: {{salasIndisponiveis}}</p>
-  <p>Salas no total: {{salaLista.length}}</p>
+<div class="corpo">
+  <div class="grid">
+    <div *ngFor="let sala of salaLista">
+      <app-cards-sala [sala]="sala"></app-cards-sala>
+    </div>
+  </div>
+
+  <div>
+    <p>Salas Disponiveis: {{ salasDisponiveis }}</p>
+    <p>Salas Reservadas: {{ salasReservadas }}</p>
+    <p>Salas Indisponiveis: {{ salasIndisponiveis }}</p>
+    <p>Salas no Total: {{ salaLista.length }}</p>
+  </div>
 </div>

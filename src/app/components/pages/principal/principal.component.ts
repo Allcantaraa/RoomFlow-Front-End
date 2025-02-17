@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { ISala } from '../../../Interfaces/Sala';
+import { Component } from '@angular/core';
 import { Status } from '../../../Enums/Status.enum';
 import { SalaList } from '../../../data/sala-lista';
 
