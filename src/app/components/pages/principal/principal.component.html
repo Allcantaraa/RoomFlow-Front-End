@@ -1,9 +1,4 @@
-<nav class="nav">
-  <img src="icons/logoRoom_processed.png" alt="" />
-  <h1>Painel de Monitoramento</h1>
-  <button class="btn btn-danger">Sair</button>
-</nav>
-
+<app-nav-bar [textoNav]="'Painel de Monitoramento'" ></app-nav-bar>
 <div class="corpo">
   <div class="grid">
     <div *ngFor="let sala of salaLista">

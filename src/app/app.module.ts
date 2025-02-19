@@ -8,11 +8,14 @@ import { PrincipalComponent } from './components/pages/principal/principal.compo
 import { GerenciamentoComponent } from './components/pages/gerenciamento/gerenciamento.component';
 import { EsqueciASenhaComponent } from './components/pages/esqueci-a-senha/esqueci-a-senha.component';
 import { CadastroComponent } from './components/pages/cadastro/cadastro.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { ContainerLoginComponent } from './components/pages/login/container-login/container-login.component';
 import { DataPipe } from './Pipes/data.pipe';
 import { CardsSalaComponent } from './components/pages/principal/cards-sala/cards-sala.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { ListaDeUsuariosComponent } from './components/pages/gerenciamento/lista-de-usuarios/lista-de-usuarios.component';
+import { AngularMaterialModule } from './angular-material/angular-material.module';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 
 @NgModule({
@@ -26,11 +29,14 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     ContainerLoginComponent,
     DataPipe,
     CardsSalaComponent,
+    ListaDeUsuariosComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    AngularMaterialModule
     
   ],
   providers: [
