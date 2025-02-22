@@ -16,6 +16,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { ListaDeUsuariosComponent } from './components/pages/gerenciamento/lista-de-usuarios/lista-de-usuarios.component';
 import { AngularMaterialModule } from './angular-material/angular-material.module';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { InicialComponent } from './components/pages/inicial/inicial.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     CardsSalaComponent,
     ListaDeUsuariosComponent,
     NavBarComponent,
+    InicialComponent,
   ],
   imports: [
     BrowserModule,

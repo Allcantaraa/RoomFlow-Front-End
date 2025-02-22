@@ -1,60 +1,44 @@
-<!-- <div class="container" id="princ">
-  <div class="row justify-content-center">
-      <div class="col-md-5 ">
-          <div class="card">
-            <img [src]="urlLogo" alt="Logo RoomFlow" class="card-image-top">
-              <div class="card-body">
-                <mat-form-field>
-                  <mat-label>Enter your email</mat-label>
-                  <input
-                    matInput
-                    placeholder="pat@example.com"
-                    [formControl]="email"
-                    (blur)="updateErrorMessage()"s
-                    required
-                  />
-                  @if (email.invalid) {
-                    <mat-error>{{errorMessage()}}</mat-error>
-                  }
-                </mat-form-field>
-                  <p class="text-center"><a routerLink="esqueci">Esqueceu a senha?</a></p>
-                  <hr>
-                  <p class="text-center">Não tem cadastro? Cadastra-se  <a  routerLink="cadastro">aqui.</a></p>
-              </div>
-          </div>
-      </div>
-  </div>
-</div> -->
-
-
-
-
-
-
 <div class="container" id="princ">
   <div class="row justify-content-center">
-      <div class="col-md-5 ">
-          <div class="card">
-            <img [src]="urlLogo" alt="Logo RoomFlow" class="card-image-top">
-              <div class="card-body">
-                  <form>
-                    <h5 class="text-center pb-4">Informe seus dados</h5>
-                      <div class="mb-3">
-                          <input type="email" class="form-control meu-input" name="email" id="email" placeholder="Email">
-                      </div>
-                      <div class="mb-3">
-                          <input type="password" class="form-control meu-input " name="senha" id="senha" placeholder="Senha">
-                      </div>
-                      <div class="mb-3 d-flex justify-content-center">
-                        <button class="btn btn-primary" routerLink="principal">Acessar</button>
-                      </div>
-                  </form>
-                  <p class="text-center"><a routerLink="esqueci">Esqueceu a senha?</a></p>
-                  <hr>
-                  <p class="text-center">Não tem cadastro? Cadastra-se  <a  routerLink="cadastro">aqui.</a></p>
-              </div>
-          </div>
+    <div class="col-md-5">
+      <div class="card">
+        <img [src]="urlLogo" alt="Logo RoomFlow" class="card-image-top" />
+        <div class="card-body">
+          <form>
+            <h5 class="text-center pb-4">Informe seus dados</h5>
+            <div class="mb-3">
+              <input
+                type="email"
+                class="form-control meu-input"
+                name="email"
+                id="email"
+                placeholder="Email"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="password"
+                class="form-control meu-input"
+                name="senha"
+                id="senha"
+                placeholder="Senha"
+              />
+            </div>
+            <div class="mb-3 d-flex justify-content-center">
+              <button class="btn btn-primary" routerLink="/principal">
+                Acessar
+              </button>
+            </div>
+          </form>
+          <p class="text-center">
+            <a routerLink="/esqueci">Esqueceu a senha?</a>
+          </p>
+          <hr />
+          <p class="text-center">
+            Não tem cadastro? Cadastra-se <a routerLink="/cadastro">aqui.</a>
+          </p>
+        </div>
       </div>
+    </div>
   </div>
-</div> 
-
+</div>
