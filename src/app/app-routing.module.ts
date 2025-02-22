@@ -5,9 +5,11 @@ import { PrincipalComponent } from './components/pages/principal/principal.compo
 import { EsqueciASenhaComponent } from './components/pages/esqueci-a-senha/esqueci-a-senha.component';
 import { CadastroComponent } from './components/pages/cadastro/cadastro.component';
 import { GerenciamentoComponent } from './components/pages/gerenciamento/gerenciamento.component';
+import { InicialComponent } from './components/pages/inicial/inicial.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
+  { path: '', component: InicialComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'principal', component: PrincipalComponent },
   { path: 'esqueci', component: EsqueciASenhaComponent },
   { path: 'cadastro', component: CadastroComponent },

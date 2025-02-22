@@ -14,7 +14,7 @@ export class ContainerLoginComponent {
   email = '';
   senha = '';
 
-  urlLogo = 'icons/logoRoom_processed.png';
+  urlLogo = 'icons/Padrão_processed.png';
 
 
 }
