@@ -1,5 +1,30 @@
+
 .container {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
-  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.image-left {
+  display: flex;
+  width: 40%;
+  height: 100%;
+  background-color: aqua;
+}
+
+.image-right {
+  display: flex;
+  width: 40%;
+  height: 100%;
+  background-color: bisque;
+}
+
+
+.form {
+  display: flex;
+  width: 20%;
+  height: 100%;
+  background-color: blue;
 }

@@ -9,7 +9,6 @@ import { GerenciamentoComponent } from './components/pages/gerenciamento/gerenci
 import { EsqueciASenhaComponent } from './components/pages/esqueci-a-senha/esqueci-a-senha.component';
 import { CadastroComponent } from './components/pages/cadastro/cadastro.component';
 import { FormsModule } from '@angular/forms';
-import { ContainerLoginComponent } from './components/pages/login/container-login/container-login.component';
 import { DataPipe } from './Pipes/data.pipe';
 import { CardsSalaComponent } from './components/pages/principal/cards-sala/cards-sala.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -27,7 +26,6 @@ import { InicialComponent } from './components/pages/inicial/inicial.component';
     GerenciamentoComponent,
     EsqueciASenhaComponent,
     CadastroComponent,
-    ContainerLoginComponent,
     DataPipe,
     CardsSalaComponent,
     ListaDeUsuariosComponent,
