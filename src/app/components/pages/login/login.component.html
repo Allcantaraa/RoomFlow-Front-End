@@ -1,5 +1,18 @@
 <div class="container">
   <section class="image-left"></section>
-  <section class="form"></section>
+  <section class="form">
+    <form>
+      <div class="form-group caixa">
+        <h2>Informe seus dados</h2>
+        <input id="email" type="email" placeholder="E-mail" class="form-control col-md-3 mb-3 mt-5">
+        <input id="senha" type="password" placeholder="Senha" class="form-control col-md-3 mb-3">
+        <div class="text-center">  <button class="btn btn-primary col-md-4">Acessar</button>
+        </div>
+        <a routerLink="/esqueci" class="esqueceu">Esqueceu a senha?</a>
+        <hr>
+        <p>Não tem cadastro? Cadastra-se <a routerLink="/cadastro">aqui</a></p>
+      </div>
+    </form>
+  </section>
   <section class="image-right"></section>
 </div>
