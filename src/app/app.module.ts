@@ -8,7 +8,7 @@ import { PrincipalComponent } from './components/pages/principal/principal.compo
 import { GerenciamentoComponent } from './components/pages/gerenciamento/gerenciamento.component';
 import { EsqueciASenhaComponent } from './components/pages/esqueci-a-senha/esqueci-a-senha.component';
 import { CadastroComponent } from './components/pages/cadastro/cadastro.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataPipe } from './Pipes/data.pipe';
 import { CardsSalaComponent } from './components/pages/principal/cards-sala/cards-sala.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -36,7 +36,8 @@ import { InicialComponent } from './components/pages/inicial/inicial.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    ReactiveFormsModule
     
   ],
   providers: [
