@@ -1,3 +1,20 @@
 <div>
-    <div [ngStyle]="{'background-color': corDoCard()}" class="card"> {{sala.id}}</div>
-</div>
+    <div 
+      [ngStyle]="{'background-color': corDoCard()}" 
+      class="card" 
+      (click)="toggleCard()"
+    > 
+      {{ sala.id }}
+    </div>
+  </div>
+  
+  <div class="overlay" *ngIf="exibirCard" (click)="toggleCard()">
+    <div class="modal-card" (click)="$event.stopPropagation()">
+      <h5 class="card-title"> {{ salaResponse.salaDescricao }}</h5>
+      <p class="card-text">Professor: {{  salaResponse.professorNome }}</p>
+      <p class="card-text">Disciplina: {{  salaResponse.disciplinaNome}}</p>
+      <p class="card-text">Turma: {{  salaResponse.turmaDescricao }}</p>
+      <button class="btn btn-primary" (click)="toggleCard()">Fechar</button>
+    </div>
+  </div>
+  

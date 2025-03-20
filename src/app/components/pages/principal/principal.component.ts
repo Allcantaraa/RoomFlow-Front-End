@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Status } from '../../../Enums/Status.enum';
 import { SalaList } from '../../../data/sala-lista';
+import { UsersList } from '../../../data/usuario-lista';
+import { Perfil } from '../../../Enums/Perfil.enum';
 
 @Component({
   selector: 'app-principal',

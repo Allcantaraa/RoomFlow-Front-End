@@ -2,13 +2,13 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 15%;
+  height: 12%;
   background-color: white;
 }
 
 nav > img {
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
 }
 
 nav > button {

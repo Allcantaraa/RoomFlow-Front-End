@@ -48,4 +48,14 @@ export const SalaList: ISala[] = [
         descricao: 'sala 9',
         status: Status.Indisponivel
     },
+    {
+        id: 10,
+        descricao: 'sala 10',
+        status: Status.Disponivel
+    },
+    {
+        id: 11,
+        descricao: 'sala 11',
+        status: Status.Disponivel
+    },
 ];
