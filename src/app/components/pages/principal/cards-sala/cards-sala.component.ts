@@ -18,18 +18,18 @@ export class CardsSalaComponent {
   exibirCard: boolean = false;
 
   toggleCard() {
-    if(this.sala.status === Status.Indisponivel) {
+    if(this.sala.status === Status.Reservada) {
       this.exibirCard = !this.exibirCard;
     } 
   }
 
   corDoCard(): string {
     if (this.sala.status === Status.Disponivel) {
-      return 'rgb(58, 194, 58)';
+      return 'rgb(40, 167, 69) ';
     } else if (this.sala.status === Status.Indisponivel) {
-      return 'rgb(219, 70, 59)';
+      return 'rgb(117, 117, 117)';
     } else {
-      return 'rgb(190, 219, 59)';
+      return 'rgb(198, 40, 40)';
     }
   }
 
