@@ -1,18 +1,90 @@
 <div class="container">
-  <section class="image-left"></section>
-  <section class="form">
-    <form>
+  <div class="imagem-fundo"></div>
+  <div class="container_caixa">
+    <form [formGroup]="formularioDeUsuario">
       <div class="form-group caixa">
         <h2>Informe seus dados</h2>
-        <input id="email" type="email" placeholder="E-mail" class="form-control col-md-3 mb-3 mt-5">
-        <input id="senha" type="password" placeholder="Senha" class="form-control col-md-3 mb-3">
-        <div class="text-center">  <button class="btn btn-primary col-md-4">Acessar</button>
+        <input
+          name="email"
+          id="email"
+          type="email"
+          placeholder="E-mail"
+          class="form-control col-md-3 mt-5"
+          formControlName="email"
+          [class.is-invalid]="
+            formularioDeUsuario.get('email')?.errors &&
+            formularioDeUsuario.get('email')?.touched
+          "
+        />
+        <div
+          *ngIf="
+            formularioDeUsuario.get('email')?.hasError('required') &&
+            formularioDeUsuario.get('email')?.touched
+          "
+          class="invalid-feedback"
+        >
+          O campo email é obrigatório
+        </div>
+        <div
+          *ngIf="
+            formularioDeUsuario.get('email')?.hasError('email') &&
+            formularioDeUsuario.get('email')?.touched
+          "
+          class="invalid-feedback"
+        >
+          Preencha no formato de email
+        </div>
+        <input
+          id="senha"
+          name="senha"
+          type="password"
+          placeholder="Senha"
+          class="form-control col-md-3 mt-3"
+          formControlName="senha"
+          [class.is-invalid]="
+            formularioDeUsuario.get('senha')?.errors &&
+            formularioDeUsuario.get('senha')?.touched
+          "
+        />
+        <div
+          class="invalid-feedback"
+          *ngIf="
+            formularioDeUsuario.get('senha')?.hasError('required') &&
+            formularioDeUsuario.get('senha')?.touched
+          "
+        >
+          O campo senha é obrigatório
+        </div>
+        <div
+          class="invalid-feedback"
+          *ngIf="
+            formularioDeUsuario.get('senha')?.hasError('minlength') &&
+            formularioDeUsuario.get('senha')?.touched
+          "
+        >
+          O senha precisa de no mínimo 6 caracteres
+        </div>
+        <div
+          class="invalid-feedback"
+          *ngIf="
+            formularioDeUsuario.get('senha')?.hasError('maxlength') &&
+            formularioDeUsuario.get('senha')?.touched
+          "
+        >
+          O senha não pode conter mais de 50 caracteres
+        </div>
+        <div class="text-center">
+          <button
+            class="btn btn-primary col-md-4 mt-4"
+            [disabled]="formularioDeUsuario.invalid"
+          >
+            Acessar
+          </button>
         </div>
         <a routerLink="/esqueci" class="esqueceu">Esqueceu a senha?</a>
-        <hr>
+        <hr />
         <p>Não tem cadastro? Cadastra-se <a routerLink="/cadastro">aqui</a></p>
       </div>
     </form>
-  </section>
-  <section class="image-right"></section>
+  </div>
 </div>
