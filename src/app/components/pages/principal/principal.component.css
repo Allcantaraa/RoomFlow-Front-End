@@ -11,12 +11,15 @@
 
 
 .grid {
-  margin: 40px;
+  margin: 60px;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-gap: 10px;
-  width: 80%;
-  border: 2px solid lightslategray;
+  width: 75%;
+  border: 2px solid rgb(255, 255, 255);
   background-color: white;
-}
+  border-radius: 15px;
+  padding: 15px;
 
+  justify-items: center;
+}
