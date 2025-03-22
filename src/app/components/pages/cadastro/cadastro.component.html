@@ -1,6 +1,6 @@
 <div class="container">
-  <section class="image-left"></section>
-  <section class="form">
+  <div class="imagem-fundo"></div>
+  <div class="container_caixa">
     <form [formGroup]="formularioDeUsuario">
       <div class="form-group caixa">
         <h2>Criar uma conta</h2>
@@ -16,17 +16,13 @@
           formControlName="nome"
         />
         <div
-          *ngIf="
-            formularioDeUsuario.get('nome')?.hasError('required')
-          "
+          *ngIf="formularioDeUsuario.get('nome')?.hasError('required')"
           class="invalid-feedback"
         >
           O campo nome é obrigatório
         </div>
         <div
-          *ngIf="
-            formularioDeUsuario.get('nome')?.hasError('maxlength')
-          "
+          *ngIf="formularioDeUsuario.get('nome')?.hasError('maxlength')"
           class="invalid-feedback"
         >
           O campo nome não pode conter mais de 250 caracteres
@@ -66,15 +62,36 @@
           placeholder="Senha"
           class="form-control col-md-3 mt-3"
           formControlName="senha"
-          [class.is-invalid]="formularioDeUsuario.get('senha')?.errors && formularioDeUsuario.get('senha')?.touched"
+          [class.is-invalid]="
+            formularioDeUsuario.get('senha')?.errors &&
+            formularioDeUsuario.get('senha')?.touched
+          "
         />
-        <div class="invalid-feedback" *ngIf="formularioDeUsuario.get('senha')?.hasError('required') &&  formularioDeUsuario.get('senha')?.touched">
+        <div
+          class="invalid-feedback"
+          *ngIf="
+            formularioDeUsuario.get('senha')?.hasError('required') &&
+            formularioDeUsuario.get('senha')?.touched
+          "
+        >
           O campo senha é obrigatório
         </div>
-        <div class="invalid-feedback" *ngIf="formularioDeUsuario.get('senha')?.hasError('minlength') &&  formularioDeUsuario.get('senha')?.touched">
+        <div
+          class="invalid-feedback"
+          *ngIf="
+            formularioDeUsuario.get('senha')?.hasError('minlength') &&
+            formularioDeUsuario.get('senha')?.touched
+          "
+        >
           O senha precisa de no mínimo 6 caracteres
         </div>
-        <div class="invalid-feedback" *ngIf="formularioDeUsuario.get('senha')?.hasError('maxlength') &&  formularioDeUsuario.get('senha')?.touched">
+        <div
+          class="invalid-feedback"
+          *ngIf="
+            formularioDeUsuario.get('senha')?.hasError('maxlength') &&
+            formularioDeUsuario.get('senha')?.touched
+          "
+        >
           O senha não pode conter mais de 50 caracteres
         </div>
         <div>
@@ -111,10 +128,5 @@
         </div>
       </div>
     </form>
-  </section>
-  <section class="image-right"></section>
-</div>
-
-<div *ngFor="let usuario of usuarios">
-  <p>Nome: {{ usuario.nome }}</p>
+  </div>
 </div>
