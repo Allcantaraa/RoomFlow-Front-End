@@ -1,4 +1,5 @@
-<app-nav-bar [textoNav]="'Painel de Monitoramento'" ></app-nav-bar>
+<app-nav-bar [textoNav]="'Painel de Monitoramento'"></app-nav-bar>
+
 <div class="corpo">
   <div class="grid">
     <div *ngFor="let sala of salaLista ; let i = index">
@@ -6,10 +7,23 @@
     </div>
   </div>
 
+
   <div class="informacoes">
-    <p>Salas Disponíveis: {{ salasDisponiveis }}</p>
-    <p>Salas Reservadas: {{ salasReservadas }}</p>
-    <p>Salas Indisponíveis: {{ salasIndisponiveis }}</p>
-    <p>Salas no Total: {{ salaLista.length }}</p>
+    <div class="informacao-item">
+      <span class="valor">{{ salasDisponiveis }}</span>
+      <span>Disponíveis</span>
+    </div>
+    <div class="informacao-item">
+      <span class="valor">{{ salasReservadas }}</span>
+      <span>Reservadas</span>
+    </div>
+    <div class="informacao-item">
+      <span class="valor">{{ salasIndisponiveis }}</span>
+      <span>Indisponíveis</span>
+    </div>
+    <div class="informacao-item">
+      <span class="valor">{{ salaLista.length }}</span>
+      <span>Salas no Total</span>
+    </div>
   </div>
 </div>
