@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { UsersList } from '../../../data/usuario-lista';
+import { IUsuario } from '../../../Interfaces/Usuario.interface';
 
 
 @Component({
@@ -12,7 +12,7 @@ import { UsersList } from '../../../data/usuario-lista';
 })
 export class CadastroComponent implements OnInit {
 
-  usuarios = UsersList;
+  usuarios: IUsuario[] = [];
 
   formularioDeUsuario: FormGroup = new FormGroup({});
 

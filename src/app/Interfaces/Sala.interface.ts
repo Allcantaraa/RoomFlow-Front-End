@@ -1,7 +1,7 @@
 import { Status } from "../Enums/Status.enum";
 
 export interface ISala {
-  id?: number;
-  descricao: string;
-  status: Status;
+    Id?: number;
+    Descricao: string;
+    Status : Status;
 }

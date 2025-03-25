@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { IUsuario } from '../../../../Interfaces/Usuario';
+import { Component, Input } from '@angular/core';
+import { IUsuario } from '../../../../Interfaces/Usuario.interface';
+
 
 @Component({
   selector: 'app-lista-de-usuarios',
@@ -14,10 +15,4 @@ export class ListaDeUsuariosComponent {
 
   @Input() usersList: IUsuario[] = [];
 
-  @Output() userDeletado = new EventEmitter<IUsuario>();
-
-
-  OndeletarUsuario(user: IUsuario) {
-    this.userDeletado.emit(user);
-  }
 }

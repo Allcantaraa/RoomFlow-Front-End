@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Status } from '../../../Enums/Status.enum';
-import { SalaList } from '../../../data/sala-lista';
-import { UsersList } from '../../../data/usuario-lista';
-import { Perfil } from '../../../Enums/Perfil.enum';
+import { ISala } from '../../../Interfaces/Sala.interface';
+import { SalaService } from '../../../services/sala.service';
 
 @Component({
   selector: 'app-principal',
@@ -11,14 +10,34 @@ import { Perfil } from '../../../Enums/Perfil.enum';
   templateUrl: './principal.component.html',
   styleUrl: './principal.component.css'
 })
-export class PrincipalComponent {
+export class PrincipalComponent implements OnInit {
 
-  salaLista = SalaList;
+  salas: ISala[] = [];
 
-  salasDisponiveis = this.salaLista.filter((salas) => salas.status === Status.Disponivel).length;
+  constructor(private readonly _salaService:  SalaService) {}
 
-  salasReservadas = this.salaLista.filter((salas) => salas.status === Status.Reservada).length;
+  ngOnInit(): void {
+      this.getSalas();
+  }
 
-  salasIndisponiveis = this.salaLista.filter((salas) => salas.status === Status.Indisponivel).length;
+  getSalas() {
+    this._salaService.getSalas().subscribe({
+      next: lista => {
+        this.salas = lista;
+      },
+      error: erro => {
+          console.log(erro);
+          
+      },
+    });
+  }
+  
+
+  salasDisponiveis = this.salas.filter((salas) => salas.Status === Status.Disponivel).length;
+
+  salasReservadas = this.salas.filter((salas) => salas.Status === Status.Reservada).length;
+
+  salasIndisponiveis = this.salas.filter((salas) => salas.Status === Status.Indisponivel).length;
+
 
 }

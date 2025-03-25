@@ -1,19 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IUsuario } from '../Interfaces/Usuario';
+import { IUsuario } from '../Interfaces/Usuario.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioService {
 
-  constructor(private readonly _http: HttpClient) { }
+  constructor(private readonly http: HttpClient) { }
 
-  url: string = 'roomflow-api.tccnapratica.com.br/swagger';
+  private url = 'https://roomflow-api.tccnapratica.com.br/usuario/listar';
 
-
-  getUsers(): Observable<IUsuario> {
-    return this._http.get<IUsuario>(`${this.url}`);
+  getUsers() : Observable<IUsuario[]> {
+    return this.http.get<IUsuario[]>(this.url);
   }
 }

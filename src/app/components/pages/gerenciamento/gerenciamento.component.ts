@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UsersList } from '../../../data/usuario-lista';
-import { IUsuario } from '../../../Interfaces/Usuario';
 import { UsuarioService } from '../../../services/usuario.service';
+import { IUsuario } from '../../../Interfaces/Usuario.interface';
 
 @Component({
   selector: 'app-gerenciamento',
@@ -10,14 +9,26 @@ import { UsuarioService } from '../../../services/usuario.service';
   templateUrl: './gerenciamento.component.html',
   styleUrl: './gerenciamento.component.css'
 })
-export class GerenciamentoComponent {
+export class GerenciamentoComponent implements OnInit {
 
   constructor(private readonly _usuarioService: UsuarioService) {}
 
-  usuarios: IUsuario[] = UsersList;
+  usuarios: IUsuario[] = [];
 
-  OnDelete(user: IUsuario) {
-    this.usuarios = this.usuarios.filter(usuario => usuario.id !== user.id);
-  }
+ 
+  ngOnInit(): void {
+    this.getUsers();
+}
+
+getUsers() {
+  this._usuarioService.getUsers().subscribe({
+    next: list => {
+      this.usuarios = list;
+    },
+    error: erro => {
+      console.log(erro);
+    }
+  })
+}
 
 }
