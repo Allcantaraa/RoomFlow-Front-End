@@ -16,6 +16,7 @@ import { ListaDeUsuariosComponent } from './components/pages/gerenciamento/lista
 import { AngularMaterialModule } from './angular-material/angular-material.module';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { InicialComponent } from './components/pages/inicial/inicial.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { InicialComponent } from './components/pages/inicial/inicial.component';
     AppRoutingModule,
     FormsModule,
     AngularMaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
     
   ],
   providers: [

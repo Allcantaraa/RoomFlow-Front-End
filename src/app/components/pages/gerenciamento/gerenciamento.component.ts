@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UsersList } from '../../../data/usuario-lista';
 import { IUsuario } from '../../../Interfaces/Usuario';
+import { UsuarioService } from '../../../services/usuario.service';
 
 @Component({
   selector: 'app-gerenciamento',
@@ -11,6 +12,7 @@ import { IUsuario } from '../../../Interfaces/Usuario';
 })
 export class GerenciamentoComponent {
 
+  constructor(private readonly _usuarioService: UsuarioService) {}
 
   usuarios: IUsuario[] = UsersList;
 

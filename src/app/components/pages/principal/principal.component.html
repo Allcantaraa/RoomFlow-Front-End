@@ -1,8 +1,8 @@
 <app-nav-bar [textoNav]="'Painel de Monitoramento'" ></app-nav-bar>
 <div class="corpo">
   <div class="grid">
-    <div *ngFor="let sala of salaLista">
-      <app-cards-sala [sala]="sala"></app-cards-sala>
+    <div *ngFor="let sala of salaLista ; let i = index">
+      <app-cards-sala [sala]="sala" [numSala]="i"></app-cards-sala>
     </div>
   </div>
 

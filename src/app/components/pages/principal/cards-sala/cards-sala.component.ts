@@ -13,6 +13,7 @@ import { salaResponse } from '../../../../data/sala-response';
 })
 export class CardsSalaComponent {  
   @Input({ required: true }) sala: ISala = {} as ISala;
+  @Input({ required: true }) numSala! :  number; 
 
   salaResponse : ISala_Reponse = salaResponse[1];
   exibirCard: boolean = false;
