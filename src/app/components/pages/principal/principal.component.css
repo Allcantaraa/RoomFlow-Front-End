@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 85%;
+  height: 90%;
   align-items: center;
   background-color: gray;
   padding: 40px;
@@ -30,7 +30,7 @@
 }
 
 .status-item {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: bold;
   padding: 10px 20px; 
   border-radius: 10px;
@@ -41,8 +41,8 @@
   align-items: center;
 }
 .status-icon {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   margin-right: 10px; 
   border-radius: 5px; 
 }
@@ -61,10 +61,10 @@
 .informacoes {
   display: flex;
   justify-content: space-evenly;
-  width: 65%;
+  width: 50%;
   background-color: white;
   padding: 15px;
-  border-radius: 15px;
+  border-radius: 15px 15px 0 0;
   border: 2px solid rgb(255, 255, 255);
   position: fixed;
   bottom: 0;
@@ -75,18 +75,18 @@
 
 .informacao-item {
   display: flex;
-  flex-direction: column; /* Organiza o número e o texto verticalmente */
-  align-items: center; /* Centraliza os itens (número e texto) */
+  flex-direction: column;
+  align-items: center; 
   margin-bottom: 10px;
   font-size: 16px;
 }
 
 .informacao-item .valor {
   font-weight: bold;
-  font-size: 26px; /* Ajuste o tamanho do número */
+  font-size: 26px;
 }
 
 .informacao-item span {
   font-weight: normal;
-  font-size: 20px; /* Ajuste o tamanho do texto */
+  font-size: 20px;
 }
