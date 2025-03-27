@@ -26,7 +26,7 @@ export class PrincipalComponent implements OnInit {
         this.salas = lista;
       },
       error: erro => {
-          alert(erro);
+          console.log(erro.message);
       },
     });
   }
